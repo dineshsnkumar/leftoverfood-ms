@@ -4,6 +4,7 @@ CREATE TABLE "users" (
   "first_name" varchar,
   "last_name" varchar,
   "country" varchar,
+  "email_address" varchar,
   "currency" varchar,
   "created_at" timestamptz DEFAULT (now()),
   "updated_at" timestamptz DEFAULT (now())
