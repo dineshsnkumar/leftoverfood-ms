@@ -7,6 +7,14 @@ createdb:
 dropdb:
 	docker exec -it postgres dropdb leftoverfooddb
 
+migrateup:
+	migrate -path db/migrate -database "postgresql://root:root@localhost:5433/leftoverfooddb?sslmode=disable" -verbose up
 
-.PHONY: postgres createdb dropdb
+sqlcgenerate:
+	sqlc generate
+
+migratedown:
+	migrate -path db/migrate -database "postgresql://root:root@localhost:5433/leftoverfooddb?sslmode=disable" -verbose down
+
+.PHONY: postgres createdb dropdb sqlcgenerate
 

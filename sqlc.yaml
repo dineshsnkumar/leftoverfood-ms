@@ -1,0 +1,15 @@
+version: "2"
+cloud:
+  project: "leftoverfoods"
+sql:
+  - schema: "db/schema/schema.sql"
+    queries: "db/query/query.sql"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "postgresql"
+        sql_package: "pgx/v5"
+    database:
+      managed: true
+    rules:
+      - sqlc/db-prepare
