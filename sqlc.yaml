@@ -7,9 +7,6 @@ sql:
     engine: "postgresql"
     gen:
       go:
-        out: "postgresql"
+        package: "leftoverfoods"
+        out: "db/leftoverfoods"
         sql_package: "pgx/v5"
-    database:
-      managed: true
-    rules:
-      - sqlc/db-prepare
