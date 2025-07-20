@@ -3,7 +3,7 @@ cloud:
   project: "leftoverfoods"
 sql:
   - schema: "db/schema/schema.sql"
-    queries: "db/query/query.sql"
+    queries: "db/query/user.sql"
     engine: "postgresql"
     gen:
       go:
